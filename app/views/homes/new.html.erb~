@@ -1,0 +1,5 @@
+<%= form_for AddressList do |f|%>
+<%= f.label :country %>
+<%= f.text_field :country%>
+<%= f.submit %>
+<% end %>

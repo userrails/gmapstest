@@ -1,0 +1,12 @@
+<% @addresses.each do |a| %>
+<%= a.city %><br/>
+<%= a.country %><br/>
+<%= a.longitude %><br/>
+<%= a.latitude %><br/>
+<% end %>
+
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'>
+  <%= gmaps4rails(@json) %>>
+</div>
+</div>

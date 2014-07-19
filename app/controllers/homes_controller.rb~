@@ -1,0 +1,19 @@
+class HomesController < ApplicationController
+  def index
+	@addresses=AddressList.all
+  end
+
+	def new
+	@address = AddressList.new
+	end
+
+def create
+@address = AddressList.new(params[:address])
+if @address.save
+redirect_to '/'
+else
+render 'new'
+end
+end
+
+end

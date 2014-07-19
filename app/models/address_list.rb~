@@ -1,0 +1,10 @@
+class AddressList < ActiveRecord::Base
+   attr_accessible :country, :latitude, :longitude, :gmaps
+   validates :country, :presence => true
+
+ acts_as_gmappable 
+
+def gmaps4rails_address
+  "#{self.country}" 
+  end
+end
